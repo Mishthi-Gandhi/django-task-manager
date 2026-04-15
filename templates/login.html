@@ -1,0 +1,10 @@
+<h2>Login</h2>
+<p>New user? <a style="text-decoration: none;color: black;" href="/signup/">Create Account</a></p>
+<form method="POST">
+  {% csrf_token %}
+  <input type="text" name="username" placeholder="Username">
+  <input type="password" name="password" placeholder="Password">
+  <button type="submit">Login</button>
+</form>
+
+<p style="color:red">{{ error }}</p>
